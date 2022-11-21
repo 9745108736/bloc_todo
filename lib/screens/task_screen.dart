@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learning_bloc/models/task.dart';
+import 'package:learning_bloc/screens/my_drawer.dart';
 
 import '../blocs/bloc_exports.dart';
 import '../widgets/task_list.dart';
@@ -41,13 +42,14 @@ class _TasksScreenState extends State<TasksScreen> {
               )
             ],
           ),
+          drawer: MyDrawer(),
           body: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const Center(
+               Center(
                 child: Chip(
                   label: Text(
-                    'Tasks:',
+                    '${state.allTasks.length } Tasks',
                   ),
                 ),
               ),
