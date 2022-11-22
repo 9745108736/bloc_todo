@@ -7,6 +7,7 @@ import '../services/guid_gen.dart';
 class AddTaskScreen extends StatelessWidget {
   const AddTaskScreen({Key? key}) : super(key: key);
 
+
   @override
   Widget build(BuildContext context) {
     TextEditingController textEditingController = TextEditingController();
@@ -36,9 +37,8 @@ class AddTaskScreen extends StatelessWidget {
             ElevatedButton(
                 onPressed: () {
                   var _task = Task(
-                    title: textEditingController.text,
-                    id: GUIGen.idGenerator()
-                  );
+                      title: textEditingController.text,
+                      id: GUIGen.idGenerator());
                   context.read<TasksBloc>().add(AddTask(task: _task));
                   textEditingController.clear();
                   Navigator.pop(context);
