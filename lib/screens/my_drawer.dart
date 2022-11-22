@@ -17,9 +17,14 @@ class MyDrawer extends StatelessWidget {
                 style: Theme.of(context).textTheme.headline5,
               ),
             ),
-            ListTile(
+           const ListTile(
               leading: Icon(Icons.folder_special),
               title: Text('My Task'),
+              trailing: Text('0'),
+            ),
+            const ListTile(
+              leading: Icon(Icons.folder_special),
+              title: Text('Bin'),
               trailing: Text('0'),
             ),
           ],
